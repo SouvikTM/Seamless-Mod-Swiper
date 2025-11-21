@@ -1,0 +1,130 @@
+.mod-card {
+  width: min(760px, 95vw);
+  background: var(--color-surface);
+  border-radius: 28px;
+  padding: 1.75rem;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.mod-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), transparent 45%);
+  pointer-events: none;
+}
+
+.mod-card__header {
+  display: flex;
+  gap: 1rem;
+}
+
+.mod-card__thumb {
+  width: 110px;
+  height: 110px;
+  border-radius: 22px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.mod-card__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.mod-card__meta {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.mod-card__summary {
+  margin: 1.2rem 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.mod-card__scores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.score-meter {
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.score-meter__label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.score-meter__value {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.score-meter__track {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  margin-top: 0.75rem;
+  overflow: hidden;
+}
+
+.score-meter__bar {
+  height: 100%;
+  border-radius: inherit;
+}
+
+.mod-card__signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.mod-card__signal {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.mod-card__signal.positive {
+  background: rgba(52, 211, 153, 0.16);
+  color: #6ee7b7;
+}
+
+.mod-card__signal.negative {
+  background: rgba(248, 113, 113, 0.12);
+  color: #fda4af;
+}
+
+.mod-card__notes {
+  font-size: 0.92rem;
+  color: var(--color-muted);
+}
+
+.mod-card__cta {
+  margin-top: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
